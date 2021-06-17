@@ -7,6 +7,9 @@ const {
   editUser,
   loginUser,
   getUserByUsername,
+  getLikesByUserId,
+  getTweetsByUserId,
+  getMediaByUserId,
 } = require('../controllers/user/user');
 
 const { verifyJwt } = require('../authorization');
@@ -19,5 +22,8 @@ router.put(
 );
 router.post('/login-user', loginUser);
 router.get('/get-user', getUserByUsername);
+router.get('/get-tweets', getTweetsByUserId);
+router.get('/get-likes', getLikesByUserId);
+router.get('/get-media', getMediaByUserId);
 
 module.exports = router;
